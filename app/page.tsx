@@ -9,6 +9,8 @@ type Job = {
 };
 
 export default async function Home() {
+  // throw new Error("Test error: boundary should catch this"); // <-- TEMP
+  //
   const { data: jobs, error } = await supabase
     .from("jobs")
     .select("*")
